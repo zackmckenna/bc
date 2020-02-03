@@ -73,8 +73,17 @@ function App() {
         <Fade show={show}>
           <h2>a <span style={{ color: '#5bc0de' }}>{skill}</span> who <span style={{ color: '#5cb85c' }}>{activity}</span></h2>
         </Fade>      </header>
-      <div>
-        <h4>Test</h4>
+      <div className='Education'>
+        <h2>Education</h2>
+        <h3>Arcadia University</h3>
+        <h4>BA in Global Media and Philosophy</h4>
+
+      </div>
+      <div className='Experience'>
+        <h2>Experience</h2>
+        <h4>Full-time Audio/Video Engineer and Designer in the Philly theater scene since 2014.</h4>
+        <h4>One national award and one Barrymore Nomination for Sound Design</h4>
+        <h4>Audio Lead for 4 unique theaters</h4>
       </div>
     </div>
     </>
