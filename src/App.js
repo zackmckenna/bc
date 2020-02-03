@@ -81,9 +81,9 @@ function App() {
       </div>
       <div className='Experience'>
         <h2>Experience</h2>
-        <h4>Full-time Audio/Video Engineer and Designer in the Philly theater scene since 2014.</h4>
-        <h4>One national award and one Barrymore Nomination for Sound Design</h4>
-        <h4>Audio Lead for 4 unique theaters</h4>
+        <h4>INFO INFO INFO INFO</h4>
+        <h4>INFO INFO INFO INFO</h4>
+        <h4>INFO INFO INFO INFO</h4>
       </div>
     </div>
     </>
