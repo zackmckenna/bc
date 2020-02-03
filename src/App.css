@@ -13,6 +13,15 @@
   }
 }
 
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.visible {
+  transition: opacity 1s ease-in;
+  opacity: 1;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -45,5 +54,23 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
