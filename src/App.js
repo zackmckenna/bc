@@ -42,7 +42,8 @@ function App() {
     'sound designer',
     'video designer',
     'game maker',
-    'collaborator'
+    'collaborator',
+    'composer'
   ]
 
   const getRandomArrayElement = array => {
