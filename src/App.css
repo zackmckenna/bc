@@ -29,30 +29,130 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
   color: white;
 }
 
-.Education {
+.box {
+  color: white;
+  font-size:  100px;
+  text-align: center;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+  padding: 10px;
+  width: 300px;
+  flex: 1;
+}
+
+.box1 {
+  background-color: black;
+}
+.box2 {
+  background-color: blue;
+}
+.box3 {
+  background-color: pink;
+}
+.box4 {
+  background-color: purple;
+}
+.box5 {
+  background-color: yellow;
+}
+.box6 {
+  background-color: orange;
+}
+.box7 {
+  background-color: green;
+}
+.box8 {
+  background-color: turquoise;
+}
+.box9 {
+  background-color: aqua;
+}
+.box10 {
+  background-color: red;
+}
+.container {
+  display: flex;
+  border: 10px solid goldenrod;
+  height: 100vh;
+}
+
+#Education {
   background-color: #5bc0de;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
   color: white;
 }
 
-.Experience {
+#experience {
   background-color: #5cb85c;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
   color: white;
+}
+
+#blurb {
+  background-color: #5bc0de;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  color: white;
+}
+
+#projects {
+  background-color: #f0ad4e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  color: white;
+}
+
+a {
+  border-bottom: 1px solid #453886;
+  color: #a5269f;
+  padding-bottom: .10em;
+  text-decoration: none;
+}
+
+a:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 10%;
+  border-bottom: 0;
+  padding-bottom: .3em;
+  text-decoration: none;
+}
+
+.projectLinks {
+
+}
+
+.projectText {
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .App-link {

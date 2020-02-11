@@ -20,6 +20,7 @@ import data from './services/data';
 import AwesomeSlider from 'react-awesome-slider'
 import 'react-awesome-slider/dist/styles.css'
 
+
 import {
   BrowserRouter as Router,
   Switch,
