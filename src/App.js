@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import './App.css';
 import Resume from './components/Resume'
+import Projects from './components/Projects'
 import Home from './components/Home'
 import About from './components/About'
 import Exploration from './components/Exploration'
@@ -18,13 +19,7 @@ function App() {
   const [skill, setSkill] = useState('developer')
   const [activity, setActivity] = useState('is glad you are here')
   const [styles, setStyles] = useState({
-    fillStyle: {
-      position: 'absolute',
-      left: 0,
-      right: 0,
-      top: 0,
-      bottom: 0
-    },
+    backgroundColor: {backgroundColor: '#e9e9e9' },
     navStyle: {
       padding: 0,
       margin: 0,
@@ -78,7 +73,9 @@ function App() {
     'composer'
   ]
 
-
+  const changeColor = () => {
+    setStyles(styles => styles, styles.backgroundColor = {backgroundColor: '#343a40'})
+  }
 
   const getRandomArrayElement = array => {
     return array[Math.floor(Math.random() * array.length)]
@@ -115,16 +112,18 @@ function App() {
   // <Link to='/exploration'>Exploration</Link>
 
   return (
-    <div className='App'>
+    <div style={styles.backgroundColor} className='App'>
       <div>
         <Router>
-          <div style={styles.fillStyle}>
-            <header style={styles.navStyle} className='headerTransparent'>
-              <Link to='/'>Home</Link>
-              <Link to='/resume'>Resume</Link>
-              <Link to='/about'>About</Link>
+          <div>
+            <header style={{...styles.backgroundColor , paddingTop: '2rem'}} >
+              <Link style={{ color: '#444' }} to='/'>Home</Link>
+              <Link style={{ color: '#444' }} to='/resume'>Resume</Link>
+              {/* <Link style={{ color: '#444' }} to='/about'>About</Link> */}
+              <Link style={{ color: '#444' }} to='/projects'>Projects</Link>
+              {/* <button onClick={() => changeColor()}>Click me</button> */}
             </header>
-            <div style={styles.content}>
+            <div >
             <Switch>
               <Route exact path='/'>
                 <Home show={show} skill={skill} activity={activity}/>
@@ -137,6 +136,9 @@ function App() {
               </Route>
               <Route path='/about'>
                 <About show={show} skill={skill} activity={activity}/>
+              </Route>
+              <Route path='/projects'>
+                <Projects />
               </Route>
             </Switch>
             </div>
