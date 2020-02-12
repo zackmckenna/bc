@@ -1,23 +1,10 @@
 import React, {useState, useEffect } from 'react';
 import './App.css';
-import { Box, Grid, Paper } from '@material-ui/core'
-import BuildIcon from '@material-ui/icons/Build';
-import GroupWorkIcon from '@material-ui/icons/GroupWork';
-import ExtensionIcon from '@material-ui/icons/Extension';
-import { AppBar, Button, Toolbar, Typography } from '@material-ui/core'
-
-import Fade from './Fade'
-import Education from './components/Education'
-import Experience from './components/Experience'
+import Resume from './components/Resume'
 import Projects from './components/Projects'
-import Things from './components/Things'
-import Blurb from './components/Blurb'
+import Home from './components/Home'
+import About from './components/About'
 import Exploration from './components/Exploration'
-import { Container } from '@material-ui/core'
-import InfoBlurb from './components/InfoBlurb'
-import Age from './components/Age'
-import data from './services/data';
-import AwesomeSlider from 'react-awesome-slider'
 import 'react-awesome-slider/dist/styles.css'
 
 import {
@@ -31,11 +18,27 @@ function App() {
   const [show, setShow] = useState(false)
   const [skill, setSkill] = useState('developer')
   const [activity, setActivity] = useState('is glad you are here')
-  const [bikingData, setBikingData] = useState([])
+  const [styles, setStyles] = useState({
+    backgroundColor: {backgroundColor: '#e9e9e9' },
+    navStyle: {
+      padding: 0,
+      margin: 0,
+      position: 'absolute',
+      top: 0,
+      height: '40px',
+      width: '100%',
+      display: 'flex'
+    },
+    navItemStyle: {
+      textAlign: 'center',
+      flex: 1,
+      listStyleType: 'none',
+      padding: '10px'
+    }
+  })
 
   useEffect(() => {
     randomizeInfo()
-    setBikingData(data.getStrava())
   },[])
 
   const getAge = dateString => {
@@ -70,19 +73,9 @@ function App() {
     'composer'
   ]
 
-  const largeColorArray = [
-    {0:[
-      '#5bc0de',
-      '#5cb85c',
-      '#282c34',
-    ]}
-  ]
-
-  const smallColorArray = [
-    '#5bc0de',
-    '#5cb85c',
-    '#282c34',
-  ]
+  const changeColor = () => {
+    setStyles(styles => styles, styles.backgroundColor = {backgroundColor: '#343a40'})
+  }
 
   const getRandomArrayElement = array => {
     return array[Math.floor(Math.random() * array.length)]
@@ -113,68 +106,46 @@ function App() {
   //   console.log(array.filter(currString => currString === lastString))
   // }
 
+  // <Link to='/'>Home</Link>
+  // <Link to='/about'>About</Link>
+  // <Link to='/projects'>Projects</Link>
+  // <Link to='/exploration'>Exploration</Link>
+
   return (
-    <>
-    <div className="App">
-    {/* <AppBar style={{ backgroundColor: 'white' }}position='fixed'>
-      <Toolbar>
-        <Typography style={{ textColor: 'black' }}>
-          Z
-        </Typography>
-      </Toolbar>
-    </AppBar> */}
-      <header className="App-header">
-        <Container style={{ position: 'absolute' }} >
-        <div id='name'>
-          <h1 style={{ fontSize: '4vw' }}>I'm Zack Mckenna</h1>
-        </div>
-        <div id='infoBlurb'>
-          <Fade show={show}>
-            <h2 style={{ fontSize: '3vw' }}>a <span style={{ color: '#5bc0de' }}>{skill}</span> who <span style={{ color: '#5cb85c' }}>{activity}</span></h2>
-          </Fade>
-        </div>
-        </Container>
-      </header>
-      <div id='blurb'>
-        <Blurb />
-      </div>
-      <div id='experience'>
-        <Experience />
-      </div>
-      <div id='projects'>
-        <Projects />
-      </div>
-      <div id='Education'>
-        <Education />
-      </div>
+    <div style={styles.backgroundColor} className='App'>
       <div>
-        <Things />
+        <Router>
+          <div>
+            <header style={{...styles.backgroundColor , paddingTop: '2rem'}} >
+              <Link style={{ color: '#444' }} to='/'>Home</Link>
+              <Link style={{ color: '#444' }} to='/resume'>Resume</Link>
+              {/* <Link style={{ color: '#444' }} to='/about'>About</Link> */}
+              <Link style={{ color: '#444' }} to='/projects'>Projects</Link>
+              {/* <button onClick={() => changeColor()}>Click me</button> */}
+            </header>
+            <div >
+            <Switch>
+              <Route exact path='/'>
+                <Home show={show} skill={skill} activity={activity}/>
+              </Route>
+              <Route path='/exploration'>
+                <Exploration />
+              </Route>
+              <Route path='/resume'>
+                <Resume />
+              </Route>
+              <Route path='/about'>
+                <About show={show} skill={skill} activity={activity}/>
+              </Route>
+              <Route path='/projects'>
+                <Projects />
+              </Route>
+            </Switch>
+            </div>
+          </div>
+        </Router>
       </div>
-      <Router>
-        <div>
-          <nav>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/about'>About</Link>
-            </li>
-            <li>
-              <Link to='/projects'></Link>
-            </li>
-            <li>
-              <Link to='/exploration'>Exploration</Link>
-            </li>
-          </nav>
-          <Switch>
-            <Route path='/exploration'>
-              <Exploration />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
     </div>
-    </>
   );
 }
 
