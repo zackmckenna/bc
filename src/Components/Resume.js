@@ -3,10 +3,10 @@ import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 import Fade from '../Fade'
 
 
-const Resume = ({ skill, activity, show }) => {
+const Resume = ({ textColor, skill, activity, show }) => {
 
   return (
-    <div className='mainContent'>
+    <div style={{ color: textColor }} className='mainContent'>
       <h1 style={{ marginBottom: '0' }}>Zack McKenna</h1>
       <aside>Philadelphia, PA</aside>
       <h2 style={{ marginTop: '1rem' }}><strong>Education</strong></h2>

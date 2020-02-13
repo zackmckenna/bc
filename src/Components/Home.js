@@ -4,11 +4,11 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Fade from '../Fade'
 
-const Home = ({ skill, activity, show }) => {
+const Home = ({ textColor, skill, activity, show }) => {
 
   return (
-    <div style={{ marginTop: '5rem' }} className='mainContent'>
-      <h1 style={{textAlign: 'center'}} >Hey, I'm Zack McKenna</h1>
+    <div style={{ color: textColor, marginTop: '20vh' }} className='mainContent'>
+      <h1 style={{textAlign: 'center'}}>Hey, I'm Zack McKenna</h1>
       <Fade show={show}>
         <aside style={{textAlign: 'center'}}>a {skill} who {activity}</aside>
       </Fade>

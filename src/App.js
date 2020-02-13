@@ -18,25 +18,8 @@ function App() {
   const [show, setShow] = useState(false)
   const [skill, setSkill] = useState('developer')
   const [activity, setActivity] = useState('is glad you are here')
-  const [styles, setStyles] = useState({
-    backgroundColor: {backgroundColor: '#e9e9e9' },
-    navStyle: {
-      padding: 0,
-      margin: 0,
-      position: 'absolute',
-      top: 0,
-      height: '40px',
-      width: '100%',
-      display: 'flex'
-    },
-    navItemStyle: {
-      textAlign: 'center',
-      flex: 1,
-      listStyleType: 'none',
-      padding: '10px'
-    }
-  })
-
+  const [backgroundColor, setBackGroundColor] = useState('#e9e9e9')
+  const [textColor, setTextColor] = useState('#444')
   useEffect(() => {
     randomizeInfo()
   },[])
@@ -73,10 +56,6 @@ function App() {
     'composer'
   ]
 
-  const changeColor = () => {
-    setStyles(styles => styles, styles.backgroundColor = {backgroundColor: '#343a40'})
-  }
-
   const getRandomArrayElement = array => {
     return array[Math.floor(Math.random() * array.length)]
   }
@@ -94,6 +73,12 @@ function App() {
       randomizeInfo()
     }, 5000)
   }
+
+  const changeColor = (newBackgroundColor, newTextColor) => {
+    setBackGroundColor(newBackgroundColor)
+    setTextColor(newTextColor)
+  }
+
   // const handleClick = async () => {
   //   console.log('clicked')
   //   const bikeData = await axios.get('https://guarded-ridge-39330.herokuapp.com/api/strava')
@@ -112,33 +97,33 @@ function App() {
   // <Link to='/exploration'>Exploration</Link>
 
   return (
-    <div style={styles.backgroundColor} className='App'>
+    <div style={{ backgroundColor: backgroundColor}} className='App'>
       <div>
         <Router>
           <div>
-            <header style={{...styles.backgroundColor , paddingTop: '2rem'}} >
-              <Link style={{ color: '#444' }} to='/'>Home</Link>
-              <Link style={{ color: '#444' }} to='/resume'>Resume</Link>
+            <header style={{ textColor: textColor, backgroundColor: backgroundColor, paddingTop: '2rem'}} >
+              <Link style={{ color: textColor }} to='/bc'>Home</Link>
+              <Link style={{ color: textColor }} to='/resume'>Resume</Link>
               {/* <Link style={{ color: '#444' }} to='/about'>About</Link> */}
-              <Link style={{ color: '#444' }} to='/projects'>Projects</Link>
-              {/* <button onClick={() => changeColor()}>Click me</button> */}
+              <Link style={{ color: textColor }} to='/projects'>Projects</Link>
+              <button onClick={() => changeColor('#343a40','#f8f9fa')}>Click me</button>
             </header>
             <div >
             <Switch>
-              <Route exact path='/'>
-                <Home show={show} skill={skill} activity={activity}/>
+              <Route exact path='/bc'>
+                <Home textColor={textColor} show={show} skill={skill} activity={activity}/>
               </Route>
               <Route path='/exploration'>
                 <Exploration />
               </Route>
               <Route path='/resume'>
-                <Resume />
+                <Resume textColor={textColor}/>
               </Route>
               <Route path='/about'>
-                <About show={show} skill={skill} activity={activity}/>
+                <About textColor={textColor} show={show} skill={skill} activity={activity}/>
               </Route>
               <Route path='/projects'>
-                <Projects />
+                <Projects textColor={textColor}/>
               </Route>
             </Switch>
             </div>
