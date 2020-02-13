@@ -14,7 +14,7 @@ const Projects = ({ textColor, backgroundColor }) => {
       <p><a rel="noopener noreferrer" target='_blank' href='https://zackmckenna.github.io/GGJ_2020/'>Deployed on Github Pages Here</a> or check it out on <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/GGJ_2020'>Github</a></p>
       <h4><strong>Skel</strong></h4>
       <p>Skel is a RPG card game platform built from scratch. Instead of one game mode like SeaWitched, Skel can handle various game types. It also can handle more concurrent users, dynamically created game lobbies and a UI for custom content creation.</p>
-      <div style={{ height: '2rem' }}></div>
+      <div style={{ height: '100vh' }}></div>
     </div>
   )
 }

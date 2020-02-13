@@ -51,7 +51,7 @@ function App() {
 
   const skills = [
     'developer',
-    'sound engineer',
+    'audio engineer',
     'sound designer',
     'video designer',
     'game maker',
@@ -85,8 +85,14 @@ function App() {
   const toggleDarkMode = () => {
     console.log('clicked')
     setDarkMode(!darkMode)
-    !darkMode ? changeColor('#343a40','#f8f9fa') : changeColor('#e9e9e9', '#444')
+    !darkMode ? changeColor('#343a40','#d1d1d1') : changeColor('#e9e9e9', '#444')
   }
+
+  // const colorArray = [
+  //   {background: '#ff595f', text:'#5fff59'},
+  //   {background: , text: }
+  //   []
+  // ]
 
   // const handleClick = async () => {
   //   console.log('clicked')
