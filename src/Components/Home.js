@@ -8,7 +8,7 @@ const Home = ({ textColor, skill, activity, show }) => {
 
   return (
     <div style={{ color: textColor, marginTop: '20vh' }} className='mainContent'>
-      <h1 style={{textAlign: 'center'}}>Hey, I'm Zack McKenna</h1>
+      <h1 className='hiImZack' style={{textAlign: 'center'}}>Hey, I'm Zack McKenna</h1>
       <Fade show={show}>
         <aside style={{textAlign: 'center'}}>a {skill} who {activity}</aside>
       </Fade>
