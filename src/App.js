@@ -23,9 +23,19 @@ function App() {
   const [backgroundColor, setBackGroundColor] = useState('#e9e9e9')
   const [textColor, setTextColor] = useState('#444')
   const [darkMode, setDarkMode] = useState(false)
+  const [firstLoad, setFirstLoad] = useState(true)
+  const [funMode, setFunMode] = useState(false)
+  const [funCount, setFunCount] = useState(0)
 
   useEffect(() => {
-    randomizeInfo()
+    if (firstLoad) {
+      setFirstLoad(false)
+      setTimeout(() => {
+        randomizeInfo()
+      }, 1)
+    } else {
+        randomizeInfo()
+      }
   },[])
 
   const getAge = dateString => {
@@ -52,7 +62,7 @@ function App() {
 
   const skills = [
     'developer',
-    'audio engineer',
+    'sound engineer',
     'sound designer',
     'video designer',
     'game maker',
@@ -89,6 +99,12 @@ function App() {
     !darkMode ? changeColor('#343a40','#d1d1d1') : changeColor('#e9e9e9', '#444')
   }
 
+  const toggleFunMode = () => {
+    setFunMode(!funMode)
+    !funMode ? setFunCount(funCount + 1) : setFunCount(funCount)
+    console.log(funMode)
+    console.log(funCount)
+  }
   // const colorArray = [
   //   {background: '#ff595f', text:'#5fff59'},
   //   {background: , text: }
@@ -114,7 +130,7 @@ function App() {
 
   return (
     <div style={{ backgroundColor: backgroundColor }} className='App'>
-      <div style={{ backgroundColor: backgroundColor }}>
+      <div style={{ backgroundColor: backgroundColor }} className='container'>
         <Router>
             <header style={{ textColor: textColor, backgroundColor: backgroundColor, paddingTop: '2rem'}} >
               <Link style={{ color: textColor }} to='/bc'>Home</Link>
@@ -124,8 +140,19 @@ function App() {
               <Button className='btn-sm' variant={darkMode ? 'light' : 'dark' } onClick={() => toggleDarkMode()}>{darkMode ? 'Light' : 'Dark'} Mode</Button>
             </header>
             <Switch>
+            <Route exact path='/'>
+                <Home
+                  funCount={funCount}
+                  funMode={funMode}
+                  toggleFunMode={toggleFunMode}
+                  firstLoad={firstLoad}
+                  textColor={textColor}
+                  show={show}
+                  skill={skill}
+                  activity={activity}/>
+              </Route>
               <Route exact path='/bc'>
-                <Home textColor={textColor} show={show} skill={skill} activity={activity}/>
+                <Home funCount={funCount} funMode={funMode} toggleFunMode={toggleFunMode} firstLoad={firstLoad} textColor={textColor} show={show} skill={skill} activity={activity}/>
               </Route>
               <Route path='/exploration'>
                 <Exploration />

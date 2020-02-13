@@ -9,6 +9,7 @@ header {
   text-align: center;
   align-items: center;
   display: flex;
+  transition: .5s;
 }
 
 header a {
@@ -36,10 +37,15 @@ h2 .subtitle {
   line-height: 1.6;
   font-size: 18px;
   padding: 0 10px;
+  transition: .5s;
 }
 
 .App {
   height: 100%vh;
+  transition: .5s;
+}
+.container {
+  transition: .5s;
 }
 .zack {
   color: #d1cdcd;
@@ -71,6 +77,14 @@ h2 .subtitle {
   }
 }
 
+.hiImZack {
+}
+
+.hiImZack:hover {
+  color: rgb(80, 186, 212);
+  cursor: pointer;
+}
+
 @keyframes goDark {
   0% {
     background-color: #e9e9e9;
@@ -90,11 +104,11 @@ h2 .subtitle {
 }
 
 .goDarkMode {
-  animation: goDark 1s;
+  animation: goDark .5s;
 }
 
 .goLightMode {
-  animation: goLight 1s;
+  animation: goLight .5s;
 }
 
 @keyframes fadeIn {
