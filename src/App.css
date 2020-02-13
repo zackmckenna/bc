@@ -47,9 +47,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-=======
+}
 .navbar {
->>>>>>> jack
   justify-content: center;
   align-content: center;
   max-width: 600px;
@@ -138,4 +137,3 @@ h2 .subtitle {
   transition: opacity 1s ease-in;
   opacity: 1;
 }
->>>>>>> jack
