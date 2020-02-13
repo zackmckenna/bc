@@ -86,7 +86,7 @@ const Resume = ({ textColor }) => {
               <li>Design</li>
             </ul>
           <h2 style={{ marginTop: '1rem' }}><strong>Interests</strong></h2>
-            <ul>
+            <ul style={{ marginBottom: '0', paddingBottom: '1rem' }}>
               <li>Biking and Bike Commuting</li>
               <li>Climbing</li>
               <li>Boardgames</li>
@@ -95,7 +95,6 @@ const Resume = ({ textColor }) => {
               <li>Gardening</li>
             </ul>
         </div>
-      <div style={{ height: '100vh' }}></div>
     </div>
   )
 }

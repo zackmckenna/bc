@@ -30,8 +30,12 @@ h2 .subtitle {
   margin-top: 20px;
 }
 
+.App {
+
+}
+
 .mainContent {
-  margin: 40px auto;
+  margin: 40px auto 0px auto;
   max-width: 650px;
   line-height: 1.6;
   font-size: 18px;

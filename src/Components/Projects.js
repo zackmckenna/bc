@@ -15,8 +15,7 @@ const Projects = ({ textColor, backgroundColor }) => {
       <h4><strong>NuCamp</strong></h4>
       <p>A camping social media native mobile device app where you can rate, review, and comment on campsites. It was created using React Native and Expo SDK, and includes authentication for device functions like the camera/camera roll and native gesture handling. Check it out the source on <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/nucamp_react_native'>GitHub</a></p>
       <h4><strong>Skel</strong></h4>
-      <p>Skel is a RPG card game platform built from scratch. Instead of one game mode like SeaWitched, Skel can handle various game types. It also can handle more concurrent users, dynamically created game lobbies and a UI for custom content creation.</p>
-      <div style={{ height: '100vh' }}></div>
+      <p style={{ marginBottom: '0px', paddingBottom: '1rem' }}>Skel is a RPG card game platform built from scratch. Instead of one game mode like SeaWitched, Skel can handle various game types. It also can handle more concurrent users, dynamically created game lobbies and a UI for custom content creation.</p>
     </div>
   )
 }

@@ -7,6 +7,7 @@ import About from './components/About'
 import Exploration from './components/Exploration'
 import 'react-awesome-slider/dist/styles.css'
 import { Button } from 'react-bootstrap'
+import BackgroundColor from 'react'
 
 import {
   BrowserRouter as Router,
