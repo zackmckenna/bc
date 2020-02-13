@@ -4,7 +4,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Fade from '../Fade'
 
-const Home = ({ textColor, skill, activity, show }) => {
+const Settings = ({ textColor, skill, activity, show }) => {
 
   return (
     <div style={{ color: textColor, marginTop: '20vh' }} className='mainContent'>
@@ -21,4 +21,4 @@ const Home = ({ textColor, skill, activity, show }) => {
   )
 }
 
-export default Home
+export default Settings

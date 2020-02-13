@@ -3,7 +3,7 @@ import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 import Fade from '../Fade'
 
 
-const Resume = ({ textColor, skill, activity, show }) => {
+const Resume = ({ textColor }) => {
 
   return (
     <div style={{ color: textColor }} className='mainContent'>

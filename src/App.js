@@ -6,6 +6,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Exploration from './components/Exploration'
 import 'react-awesome-slider/dist/styles.css'
+import { Button } from 'react-bootstrap'
 
 import {
   BrowserRouter as Router,
@@ -20,6 +21,8 @@ function App() {
   const [activity, setActivity] = useState('is glad you are here')
   const [backgroundColor, setBackGroundColor] = useState('#e9e9e9')
   const [textColor, setTextColor] = useState('#444')
+  const [darkMode, setDarkMode] = useState(false)
+
   useEffect(() => {
     randomizeInfo()
   },[])
@@ -79,6 +82,12 @@ function App() {
     setTextColor(newTextColor)
   }
 
+  const toggleDarkMode = () => {
+    console.log('clicked')
+    setDarkMode(!darkMode)
+    !darkMode ? changeColor('#343a40','#f8f9fa') : changeColor('#e9e9e9', '#444')
+  }
+
   // const handleClick = async () => {
   //   console.log('clicked')
   //   const bikeData = await axios.get('https://guarded-ridge-39330.herokuapp.com/api/strava')
@@ -97,18 +106,16 @@ function App() {
   // <Link to='/exploration'>Exploration</Link>
 
   return (
-    <div style={{ backgroundColor: backgroundColor}} className='App'>
-      <div>
+    <div style={{ backgroundColor: backgroundColor }} className='App'>
+      <div style={{ backgroundColor: backgroundColor }}>
         <Router>
-          <div>
             <header style={{ textColor: textColor, backgroundColor: backgroundColor, paddingTop: '2rem'}} >
               <Link style={{ color: textColor }} to='/bc'>Home</Link>
               <Link style={{ color: textColor }} to='/resume'>Resume</Link>
               {/* <Link style={{ color: '#444' }} to='/about'>About</Link> */}
               <Link style={{ color: textColor }} to='/projects'>Projects</Link>
-              <button onClick={() => changeColor('#343a40','#f8f9fa')}>Click me</button>
+              <Button className='btn-sm' variant={darkMode ? 'light' : 'dark' } onClick={() => toggleDarkMode()}>Dark Mode</Button>
             </header>
-            <div >
             <Switch>
               <Route exact path='/bc'>
                 <Home textColor={textColor} show={show} skill={skill} activity={activity}/>
@@ -117,17 +124,15 @@ function App() {
                 <Exploration />
               </Route>
               <Route path='/resume'>
-                <Resume textColor={textColor}/>
+                <Resume backgroundColor={backgroundColor} textColor={textColor}/>
               </Route>
               <Route path='/about'>
-                <About textColor={textColor} show={show} skill={skill} activity={activity}/>
+                <About backgroundColor={backgroundColor} textColor={textColor} show={show} skill={skill} activity={activity}/>
               </Route>
               <Route path='/projects'>
-                <Projects textColor={textColor}/>
+                <Projects backgroundColor={backgroundColor} textColor={textColor}/>
               </Route>
             </Switch>
-            </div>
-          </div>
         </Router>
       </div>
     </div>

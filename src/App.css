@@ -1,62 +1,5 @@
-<<<<<<< HEAD
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.fade-in {
-  opacity: 0;
-}
-
-.fade-in.visible {
-  transition: opacity 1s ease-in;
-  opacity: 1;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.navbar {
-  justify-content: center;
-  align-content: center;
-  max-width: 600px;
-}
-
-.App {
+body > #root > div {
   height: 100vh;
-  color: #e9e9e9;
 }
 
 header {
@@ -92,7 +35,6 @@ h2 .subtitle {
   max-width: 650px;
   line-height: 1.6;
   font-size: 18px;
-  color: #444;
   padding: 0 10px;
 }
 .zack {
@@ -107,6 +49,12 @@ h2 .subtitle {
 
 .home {
   align-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes fadeIn {
