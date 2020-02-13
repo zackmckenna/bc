@@ -95,7 +95,7 @@ const Resume = ({ textColor }) => {
               <li>Gardening</li>
             </ul>
         </div>
-    </div>
+      </div>
   )
 }
 
