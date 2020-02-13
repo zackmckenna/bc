@@ -114,7 +114,7 @@ function App() {
               <Link style={{ color: textColor }} to='/resume'>Resume</Link>
               {/* <Link style={{ color: '#444' }} to='/about'>About</Link> */}
               <Link style={{ color: textColor }} to='/projects'>Projects</Link>
-              <Button className='btn-sm' variant={darkMode ? 'light' : 'dark' } onClick={() => toggleDarkMode()}>Dark Mode</Button>
+              <Button className='btn-sm' variant={darkMode ? 'light' : 'dark' } onClick={() => toggleDarkMode()}>{darkMode ? 'Light' : 'Dark'} Mode</Button>
             </header>
             <Switch>
               <Route exact path='/bc'>
