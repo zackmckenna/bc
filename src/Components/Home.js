@@ -33,21 +33,22 @@ const Home = ({
     'thanks for visiting my site',
     'no, really. thank you.',
     'look, I really appreciate it',
-    'are you really going to keep clicking?',
+    `that's seven clicks`,
+    'ok, nine clicks',
     `I'll run out of answers eventually`,
     'I promise',
     'you can probably stop clicking now',
     `I'm running out of things to say`,
     'are you getting bored yet?',
-    `I'm serious, I can only create so many answers`,
-    'is this really the best use of your time?',
+    `I can only create so many answers`,
+    'is this the best use of your time?',
     `that's it! I'm out!`,
     'gone',
     'goodbye',
     'never again',
     'nothing here to see',
     'move along now',
-    'ok. go look at something else',
+    'really! go click on some other link',
     'please',
     `don't make me keep going with this`,
     'because I will',
@@ -58,7 +59,7 @@ const Home = ({
 
   if(funMode) {
     return (
-      <div style={{ color: textColor, marginTop: '20vh' }} className='mainContent'>
+      <div style={{ height: '100vh', color: textColor, marginTop: '20vh' }} className='mainContentFun'>
         <FadeFun show={funFade}>
           <h1 className='hiImZack' style={{ textAlign: 'center'}} onClick={() => toggleFunMode()}>{responseArray[funCount] ? responseArray[funCount] : 'I have no more to say'}</h1>
         </FadeFun>
@@ -76,7 +77,7 @@ const Home = ({
     )
   } else {
     return (
-      <div style={{ color: textColor, marginTop: '20vh' }} className='mainContent'>
+      <div style={{ height: '100vh', color: textColor, marginTop: '20vh' }} className='mainContent'>
         <h1 className='hiImZack' style={{textAlign: 'center'}} onClick={() => toggleFunMode()}>Hey, I'm Zack McKenna</h1>
         <Fade show={show}>
           <aside style={{textAlign: 'center' }}>a {skill} who {activity}</aside>

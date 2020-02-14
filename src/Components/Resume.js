@@ -21,7 +21,7 @@ const Resume = ({ textColor }) => {
         <li>University of Helsinki Full Stack Open Online 2019</li>
         <li>NuCamp Full-Stack Web Development 2019-2020</li>
       </ul>
-      <p>Please refer to my LinkedIn for more certificates and classes.</p>
+      <p>Please refer to my Linkedn for more certificates and classes.</p>
       <h2><strong>Experience</strong></h2>
         <div style={{ marginTop: '1rem' }}>
           <h5><strong>Full-Stack Web Development</strong></h5>
