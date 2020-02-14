@@ -26,6 +26,7 @@ function App() {
   const [firstLoad, setFirstLoad] = useState(true)
   const [funMode, setFunMode] = useState(false)
   const [funCount, setFunCount] = useState(0)
+  const [clickCount, setClickCount] = useState(0)
 
   useEffect(() => {
     if (firstLoad) {
@@ -101,6 +102,7 @@ function App() {
 
   const toggleFunMode = () => {
     setFunMode(!funMode)
+    setClickCount(clickCount +  1)
     !funMode ? setFunCount(funCount + 1) : setFunCount(funCount)
     console.log(funMode)
     console.log(funCount)
@@ -142,6 +144,7 @@ function App() {
             <Switch>
             <Route exact path='/'>
                 <Home
+                  clickCount={clickCount}
                   funCount={funCount}
                   funMode={funMode}
                   toggleFunMode={toggleFunMode}
@@ -152,7 +155,16 @@ function App() {
                   activity={activity}/>
               </Route>
               <Route exact path='/'>
-                <Home funCount={funCount} funMode={funMode} toggleFunMode={toggleFunMode} firstLoad={firstLoad} textColor={textColor} show={show} skill={skill} activity={activity}/>
+                <Home
+                clickCount={clickCount}
+                funCount={funCount}
+                funMode={funMode}
+                toggleFunMode={toggleFunMode}
+                firstLoad={firstLoad}
+                textColor={textColor}
+                show={show}
+                skill={skill}
+                activity={activity}/>
               </Route>
               <Route path='/exploration'>
                 <Exploration />

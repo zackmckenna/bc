@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Button } from 'react-bootstrap'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
 import Fade from '../Fade'
 import FadeIcons from '../FadeIcons'
 import FadeFun from '../FadeFun'
 
 const Home = ({
                 funCount,
+                clickCount,
                 funMode,
                 toggleFunMode,
                 firstLoad,
@@ -42,11 +44,12 @@ const Home = ({
     'are you getting bored yet?',
     `I can only create so many answers`,
     'is this the best use of your time?',
-    `that's it! I'm out!`,
+    `that's it. I'm out!`,
     'gone',
     'goodbye',
-    'never again',
-    'nothing here to see',
+    'adios',
+    'au revoir',
+    'nothing to see here',
     'move along now',
     'really! go click on some other link',
     'please',
@@ -54,8 +57,48 @@ const Home = ({
     'because I will',
     'this is a war of attrition',
     'click-trition',
-    `bad puns don't bother you?`
+    `bad puns don't bother you?`,
+    'really thought I had you there',
+    'alright',
+    'you win. here, have a click-counter',
+    'you deserve it',
+    'I hope you are proud',
+    'your very own counter',
+    'just for you',
+    `now I will count down from 100`,
+    'here we go',
+    `any second now`,
+    'I meant down from a thousand',
+    'no. billion',
+    'trillion?',
+    'yup, starting now',
+    '1,000,000,000,000',
+    '999,999,999,999',
+    'oh man, I lost track',
+    `don't make me take your counter`,
+    `I'll do it`,
+    `don't make me`,
+    'all that progress',
+    'gone',
+    'for real though',
+    'just 20 more clicks',
+    'will destroy the site',
+    'like gone from the internet',
+    `you don't want to do that do you?`,
+    'how will people see my resume',
+    '5',
+    '4',
+    '3',
+    '2',
+    '1',
+    'goodbye, sweet world'
   ]
+
+  if (clickCount >= 120) {
+    return (
+      <h1><strong>404 ERROR -</strong> Not Found</h1>
+    )
+  }
 
   if(funMode) {
     return (
@@ -73,6 +116,7 @@ const Home = ({
           <div></div>
         </div>
       </FadeIcons>
+      {clickCount >= 57 ? <p className='clickCounter'>clicks: {clickCount}</p> : null}
     </div>
     )
   } else {
@@ -89,6 +133,7 @@ const Home = ({
             <div></div>
           </div>
         </FadeIcons>
+        {clickCount >= 57 ? <p className='clickCounter'>clicks: {clickCount}</p> : null}
       </div>
     )
   }
