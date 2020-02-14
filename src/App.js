@@ -133,7 +133,7 @@ function App() {
       <div style={{ backgroundColor: backgroundColor }} className='container'>
         <Router>
             <header style={{ textColor: textColor, backgroundColor: backgroundColor, paddingTop: '2rem'}} >
-              <Link style={{ color: textColor }} to='/bc'>Home</Link>
+              <Link style={{ color: textColor }} to='/'>Home</Link>
               <Link style={{ color: textColor }} to='/resume'>Resume</Link>
               {/* <Link style={{ color: '#444' }} to='/about'>About</Link> */}
               <Link style={{ color: textColor }} to='/projects'>Projects</Link>
@@ -151,7 +151,7 @@ function App() {
                   skill={skill}
                   activity={activity}/>
               </Route>
-              <Route exact path='/bc'>
+              <Route exact path='/'>
                 <Home funCount={funCount} funMode={funMode} toggleFunMode={toggleFunMode} firstLoad={firstLoad} textColor={textColor} show={show} skill={skill} activity={activity}/>
               </Route>
               <Route path='/exploration'>
