@@ -21,7 +21,7 @@ const Resume = ({ textColor }) => {
         <li>University of Helsinki Full Stack Open Online 2019</li>
         <li>NuCamp Full-Stack Web Development 2019-2020</li>
       </ul>
-      <p>Please refer to my Linkedn for more certificates and classes.</p>
+      <p>Please refer to my <a rel='noopener noreferrer' target='_blank' href='https://www.linkedin.com/in/zachary-mckenna-77912678/'>LinkedIn</a> for more certificates and classes.</p>
       <h2><strong>Experience</strong></h2>
         <div style={{ marginTop: '1rem' }}>
           <h5><strong>Full-Stack Web Development</strong></h5>
@@ -38,18 +38,18 @@ const Resume = ({ textColor }) => {
             <p>Over the past seven years I've worked as an engineer and technician for productions all throughout Philly, on hundreds of unique productions. Here are some of my highlights.</p>
             <h6><strong>IATSE Local 8</strong></h6>
                 <ul>
-                  <li>Second Audio - The Walnut Street Theater</li>
+                  <li>Second Audio - <a rel='noopener noreferrer' target='_blank' href='https://www.walnutstreettheatre.org/'>The Walnut Street Theater</a></li>
                   <li>Projection Engineer - NFL Draft</li>
                   <li>A/V Engineer - Philadelphia Convention Center</li>
                   <li>Electrics and Audio Team - The Well Fargo Center</li>
                 </ul>
             <h6><strong>Sound Design</strong></h6>
               <ul>
-                <li><em>The Radicalization of Bradley Manning</em>- Inis Nua Theater Company</li>
-                <li><em>ALIVE!</em> - Arcadia University</li>
-                <li><em>The Sincerity Project 2016</em> - Team Sunshine Corporation</li>
+                <li><em><a rel='noopener noreferrer' target='_blank' href='https://inisnuatheatre.org/show/radicalisation-bradley-manning'>The Radicalisation of Bradley Manning</a></em>- Inis Nua</li>
+                <li><em>ALIVE!</em> - Arcadia University - <a rel='noopener noreferrer' target='_blank' href='https://www.youtube.com/watch?v=KDXZcv8LCdE'>video excerpt</a></li>
+                <li><em><a rel='noopener noreferrer' target='_blank' href='https://fringearts.com/event/sincerity-project-9/'>The Sincerity Project 2016</a></em> - Team Sunshine Corporation</li>
                 <li><em>A Christmas Carol</em> - Walnut Street Theater 2018 and 2019</li>
-                <li><em>Moby Dick</em> - Hedgerow Theater</li>
+                <li><em><a rel='noopener noreferrer' target='_blank' href='https://www.inquirer.com/arts/theater/moby-dick-hedgerow-theatre-company-20190325.html'>Moby Dick</a></em> - Hedgerow Theater</li>
               </ul>
           <h6><strong>Associate Sound Design</strong></h6>
             <ul>
@@ -60,8 +60,8 @@ const Resume = ({ textColor }) => {
             </ul>
           <h6><strong>Audio Engineering</strong></h6>
             <ul>
-              <li>Lead Audio Engineer - Lantern Theater Company</li>
-              <li>Lead Audio Engineer - 1812 Productions</li>
+              <li>Lead Audio Engineer - <a rel='noopener noreferrer' target='_blank' href='https://www.lanterntheater.org/'>Lantern Theater Company</a></li>
+              <li>Lead Audio Engineer - <a rel='noopener noreferrer' target='_blank' href='https://www.1812productions.org/'>1812 Productions</a></li>
               <li>House Audio Engineer - The Prince Theater</li>
               <li>FringeFest Audio Engineer - FringeArts</li>
               <li>peh-LO-tah, Sozo Artists/Marc Bamuthi US Tour</li>
