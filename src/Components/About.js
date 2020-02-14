@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
 import Fade from '../Fade'
 
-const About = ({ skill, activity, show }) => {
+const About = ({ textColor }) => {
 
   return (
-    <div className='mainContent'>
-      <h2 className='subtitle'><strong>seven years of audio and video design</strong></h2>
+    <div style={{ color:textColor }}c lassName='mainContent'>
+      <h1></h1>
+      {/* <h2 className='subtitle'><strong>seven years of audio and video design</strong></h2>
       <p>means what exactly? The scope of the show, budget of the producer, and contents of the script vary greatly week to week. But the one thing that never changes is the hard work, deadlines, and the collaborative experience. My experience as a freelance theater designer in Philadelphia means:</p>
       <ul>
         <li>terabytes of content that didn't make the cut</li>
@@ -15,7 +16,7 @@ const About = ({ skill, activity, show }) => {
         <li>thousands of different team-mates</li>
         <li>countless stories told</li>
       </ul>
-      <h3><strong>Now, I focus on using the power of narrative to guide my web development and design</strong></h3>
+      <h3><strong>Now, I focus on using the power of narrative to guide my web development and design</strong></h3> */}
       {/* <h3>Can you do HTML and CSS?</h3>
       <p>Oh, is this too boring? click here.</p>
       <h3>What about modern libraries?</h3>

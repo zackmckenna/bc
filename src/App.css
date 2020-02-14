@@ -73,7 +73,7 @@ h2 .subtitle {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
   header a {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -83,6 +83,10 @@ h2 .subtitle {
   }
   .response{
     font-size: 8vw;
+  }
+  #darkModeButton {
+    display: none;
+
   }
 }
 

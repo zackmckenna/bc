@@ -52,12 +52,14 @@ function App() {
 
   const activities = [
     'loves to bike all over Philly',
+    'really enjoys gardening',
+    'lives with a cat named carl',
+    'lives with a snake named salsa',
     'enjoys creative collaboration',
     'thinks summer is the best season',
     'plays a ton of boardgames',
-    'spends a ton of time climbing',
+    'spends a lot of time climbing',
     'has some awesome friends',
-    'is always learning something new',
     `has been on planet earth ${getAge('1991/7/14')} days`
   ]
 
@@ -65,7 +67,7 @@ function App() {
     'developer',
     'sound engineer',
     'sound designer',
-    'video designer',
+    'projection designer',
     'game maker',
     'collaborator',
     'composer'
@@ -132,14 +134,15 @@ function App() {
 
   return (
     <div style={{ backgroundColor: backgroundColor }} className='App'>
+      <Button style={{ position: 'absolute', right: '1rem', top:'1rem'}} className='btn-sm' id='darkModeButton' variant={darkMode ? 'light' : 'dark' } onClick={() => toggleDarkMode()}>{darkMode ? 'Light' : 'Dark'} Mode</Button>
       <div style={{ backgroundColor: backgroundColor }} className='container'>
         <Router>
             <header style={{ textColor: textColor, backgroundColor: backgroundColor, paddingTop: '2rem'}} >
               <Link style={{ color: textColor }} to='/'>Home</Link>
-              <Link style={{ color: textColor }} to='/resume'>Resume</Link>
+              {/* <Link style={{ color: textColor }} to='/about'>About</Link> */}
               {/* <Link style={{ color: '#444' }} to='/about'>About</Link> */}
               <Link style={{ color: textColor }} to='/projects'>Projects</Link>
-              <Button className='btn-sm' variant={darkMode ? 'light' : 'dark' } onClick={() => toggleDarkMode()}>{darkMode ? 'Light' : 'Dark'} Mode</Button>
+              <Link style={{ color: textColor }} to='/resume'>Resume</Link>
             </header>
             <Switch>
             <Route exact path='/'>
