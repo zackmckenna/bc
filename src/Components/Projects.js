@@ -1,6 +1,11 @@
 import React from 'react'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import '../Projects.css'
+import { Carousel } from 'react-bootstrap'
+import screen1 from '../pictures/home.png'
+import screen2 from '../pictures/addclimb.png'
+import screen3 from '../pictures/climbs.png'
+import screen4 from '../pictures/graph.png'
 
 const Projects = ({ textColor, backgroundColor }) => {
   return (
@@ -14,6 +19,34 @@ const Projects = ({ textColor, backgroundColor }) => {
       <p><a rel="noopener noreferrer" target='_blank' href='https://zackmckenna.github.io/GGJ_2020/'>Deployed on Github Pages Here</a> or check it out the source on <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/GGJ_2020'>Github</a>.</p>
       <h4><strong>Bould.</strong></h4><h6>MongoDB - Express - Node - ReactNative</h6>
       <p>A minimalist climb-tracking app. A lot of the other apps on the market are bloated with features, and don't give you a concrete way to understand your own progression. Bould aims to be quick and simple to use, and provide an even easier way to understand your data. Check it out backend <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/bouldServer'>here</a>, front end <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/bouldReactNative'>here</a>. Demo on <a rel="noopener noreferrer" target='_blank' href='https://exp.host/@zackmckenna/bould'>Expo</a>.</p>
+      <div style={{ marginBottom: '3vh', display: 'flex', flex: 1, justifyContent: 'center', justifyItems: 'center' }}>
+        <img
+              style={{ width: '15vw', marginLeft: '1vw', marginRight: '1vw'}}
+              className="d-block"
+              src={screen1}
+              alt="First slide"
+            />
+            <img
+              style={{ width: '15vw', marginLeft: '1vw', marginRight: '1vw'}}
+              className="d-block"
+              src={screen2}
+              alt="Third slide"
+            />
+
+            <img
+              style={{ width: '15vw', marginLeft: '1vw', marginRight: '1vw'}}
+              className="d-block"
+              src={screen3}
+              alt="Third slide"
+            />
+
+          <img
+              style={{ width: '15vw', marginLeft: '1vw', marginRight: '1vw'}}
+              className="d-block"
+              src={screen4}
+              alt="Third slide"
+            />
+      </div >
       <h4><strong>NuCamp</strong></h4><h6>Node - ReactNative</h6>
       <p>A camping social media native mobile device app where you can rate, review, and comment on campsites. It was created using React Native and Expo SDK, and includes authentication for device functions like the camera/camera roll and native gesture handling. Check it out the source on <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/nucamp_react_native'>GitHub</a>.</p>
       <h4><strong>Skel</strong></h4><h6>MongoDB - Express - Node - React - Socket.io</h6>
