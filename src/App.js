@@ -136,7 +136,7 @@ function App() {
     <div style={{ backgroundColor: backgroundColor }} className='App'>
       <Button style={{ position: 'absolute', right: '1rem', top:'1rem'}} className='btn-sm' id='darkModeButton' variant={darkMode ? 'light' : 'dark' } onClick={() => toggleDarkMode()}>{darkMode ? 'Light' : 'Dark'} Mode</Button>
       <div style={{ backgroundColor: backgroundColor }} className='container'>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <header style={{ textColor: textColor, backgroundColor: backgroundColor, paddingTop: '2rem'}} >
               <Link style={{ color: textColor }} to='/'>Home</Link>
               {/* <Link style={{ color: textColor }} to='/about'>About</Link> */}
