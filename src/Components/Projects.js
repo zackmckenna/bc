@@ -39,13 +39,13 @@ const Projects = ({ textColor, backgroundColor }) => {
               src={screen3}
               alt="Third slide"
             />
-
+{/*
           <img
               style={{ width: '15vw', marginLeft: '1vw', marginRight: '1vw'}}
               className="d-block"
               src={screen4}
               alt="Third slide"
-            />
+            /> */}
       </div >
       <h4><strong>NuCamp</strong></h4><h6>Node - ReactNative</h6>
       <p>A camping social media native mobile device app where you can rate, review, and comment on campsites. It was created using React Native and Expo SDK, and includes authentication for device functions like the camera/camera roll and native gesture handling. Check it out the source on <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/nucamp_react_native'>GitHub</a>.</p>
