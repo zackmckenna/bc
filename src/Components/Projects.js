@@ -11,7 +11,7 @@ const Projects = ({ textColor, backgroundColor }) => {
   return (
     <div style={{ backgroundColor: backgroundColor, color: textColor }}className='mainContent'>
       <h1><strong>Projects</strong></h1>
-      <h4 style={{ marginTop: '1rem' }}><strong>MERN Boilerplate with Socket/Redux</strong></h4><h6>MongoDB - Express - Node - React - Socket.io</h6>
+      <h4 style={{ marginTop: '1rem' }}><strong>MERN Boilerplate Chatroom with Socket.io/Redux</strong></h4><h6>MongoDB - Express - Node - React - Socket.io</h6>
       <p className='projectText'>A MERN stack application boilerplate with basic user authentication and database modeling, you just need to have your own MongoDB account and cluster. The Redux store is integrated with socket.io, so you can send and receive redux actions to distribute and maintain state among clients in dynamically generated rooms.</p>
       <p><a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/mern-socket-redux-boilerplate'>Check out or download the source here</a></p>
       <h4 style={{ marginTop: '1rem' }}><strong>Seawitched</strong></h4><h6>MongoDB - Express - Node - React - Socket.io</h6>
