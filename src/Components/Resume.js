@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 import Fade from '../Fade'
 
-
 const Resume = ({ textColor }) => {
 
   return (
