@@ -9,13 +9,13 @@ import screen4 from '../pictures/graph.png'
 
 const Projects = ({ textColor, backgroundColor }) => {
   return (
-    <style={{ style={{ backgroundColor: backgroundColor, color: textColor }}className='mainContent'>
+    <div style={{ backgroundColor: backgroundColor, color: textColor }} className='mainContent'>
       <h1><strong>Projects</strong></h1>
       <h4 style={{ marginTop: '1rem' }}><strong>MERN Boilerplate Chatroom with Socket.io/Redux</strong></h4><h6>MongoDB - Express - Node - React - Redux - Socket.io</h6>
       <p className='projectText'>A MERN stack application boilerplate with basic user authentication and database modeling, you just need to have your own MongoDB account and cluster. The Redux store is integrated with socket.io, so you can send and receive redux actions to distribute and maintain state among clients in dynamically generated rooms.</p>
       <p><a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/mern-socket-redux-boilerplate'>Check out or download the source here</a></p>
       <h4 style={{ marginTop: '1rem' }}><strong>Skeleton Card</strong></h4><h6>MongoDB - Express - Node - React - Redux - Socket.io</h6>
-      <p className='projectText'>The next iteration of the Seawitched Project, Skeleton Card is a webapp platform that can handle dynamically generated rooms and unique game-types. Currently in development.</p>
+      <p className='projectText'>The next iteration of the Seawitched Project, Skeleton Card is a webapp platform that can handle dynamically generated rooms and unique game-types for RPG and storytelling games. Currently in development.</p>
       <p><a rel="noopener noreferrer" target='_blank' href='https://gentle-garden-20262.herokuapp.com/#/'>Check out the current iteration on Heroku here</a></p>
       <h4 style={{ marginTop: '1rem' }}><strong>Seawitched</strong></h4><h6>MongoDB - Express - Node - React - Socket.io</h6>
       <p className='projectText'>Seawitched is a RPG multiplayer card-game client. For games like Mafia and Werewolf, most apps on the market only distributed roles via one device that was passed around. With Seawitched, users create a unique login and join a game lobby. The app then detects the amount of users in the room, selects the right amount of roles, and distributes roles to each client's device! Way cooler and way less confusing. To use, grab four players and log in to populate the game lobby.</p>
@@ -55,8 +55,6 @@ const Projects = ({ textColor, backgroundColor }) => {
       </div >
       <h4><strong>NuCamp</strong></h4><h6>Node - ReactNative</h6>
       <p>A camping social media native mobile device app where you can rate, review, and comment on campsites. It was created using React Native and Expo SDK, and includes authentication for device functions like the camera/camera roll and native gesture handling. Check it out the source on <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/nucamp_react_native'>GitHub</a>.</p>
-      <h4><strong>Skel</strong></h4><h6>MongoDB - Express - Node - React - Socket.io</h6>
-      <p >Skel is a RPG card game platform built from scratch. Instead of one game mode like SeaWitched, Skel can handle various game types. It also can handle more concurrent users, dynamically created game lobbies and a UI for custom content creation.</p>
       <h4><strong>StaRV</strong></h4><h6>Unity</h6>
       <p style={{ marginBottom: '0px', paddingBottom: '1rem' }} className='projectText'>StaRV was built for Global Game Jam 2019. It's a single player outer-space road trip arcade adventure, where you play as a parent desperately trying to keep your StaRV on course to the vacation planet Nebula. Check out the <a rel="noopener noreferrer" target='_blank' href='https://globalgamejam.org/2019/games/starv'>Global Game Jam Page</a>.</p>
     </div>
