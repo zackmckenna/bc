@@ -26,9 +26,9 @@ const Resume = ({ textColor }) => {
           <h5><strong>Full-Stack Web Development</strong></h5>
           <p>2018 - current</p>
             <ul>
-              <li>Full-Stack Mongo, Express, React, Node web application development from scratch</li>
+              <li>Full-Stack Mongo, Express, React, Node web application development</li>
               <li>API and Web Service integration experience</li>
-              <li>Up to date with latest updates like React Hooks</li>
+              <li>JAMstack serverless development using AWS Lambda Functions</li>
               <li>Strong understanding of UI/UX design</li>
               <li>React Native development experience with Expo</li>
             </ul>
