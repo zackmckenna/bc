@@ -11,6 +11,9 @@ const Projects = ({ textColor, backgroundColor }) => {
   return (
     <div style={{ backgroundColor: backgroundColor, color: textColor }} className='mainContent'>
       <h1><strong>Projects</strong></h1>
+      <h4 style={{ marginTop: '1rem' }}><strong>From the Root to the Fruit</strong></h4><h6>JAMstack - React.js - Bootstrap - Gatsby - Netlify</h6>
+      <p className='projectText'>A webpage built for the event From the Root to the Fruit: Portraits of Black Fathers and Their Children, presented at the Barnes. Developed using the JAMstack, built with Gatsby, and deployed/hosted on CMS via Netlify.</p>
+      <p>View the site at <a rel="noopener noreferrer" target='_blank' href='https://www.fromtheroottothefruit.org/'>fromtheroottothefruit.org</a></p>
       <h4 style={{ marginTop: '1rem' }}><strong>MERN Boilerplate Chatroom with Socket.io/Redux</strong></h4><h6>MongoDB - Express - Node - React - Redux - Socket.io</h6>
       <p className='projectText'>A MERN stack application boilerplate with basic user authentication and database modeling, you just need to have your own MongoDB account and cluster. The Redux store is integrated with socket.io, so you can send and receive redux actions to distribute and maintain state among clients in dynamically generated rooms.</p>
       <p><a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/mern-socket-redux-boilerplate'>Check out or download the source here</a></p>

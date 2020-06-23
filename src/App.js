@@ -3,6 +3,7 @@ import './App.css';
 import Resume from './components/Resume'
 import Projects from './components/Projects'
 import Home from './components/Home'
+import Sandbox from './components/SandBox'
 import About from './components/About'
 import Exploration from './components/Exploration'
 import 'react-awesome-slider/dist/styles.css'
@@ -143,6 +144,7 @@ function App() {
               {/* <Link style={{ color: '#444' }} to='/about'>About</Link> */}
               <Link style={{ color: textColor }} to='/projects'>Projects</Link>
               <Link style={{ color: textColor }} to='/resume'>Resume</Link>
+              {/* <Link style={{ color: textColor }} to='/sandbox'>Sandbox</Link> */}
             </header>
             <Switch>
             <Route exact path='/'>
@@ -180,6 +182,9 @@ function App() {
               </Route>
               <Route path='/projects'>
                 <Projects backgroundColor={backgroundColor} textColor={textColor}/>
+              </Route>
+              <Route path='/sandbox'>
+                <Sandbox />
               </Route>
             </Switch>
         </Router>
