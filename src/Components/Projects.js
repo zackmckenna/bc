@@ -14,6 +14,9 @@ const Projects = ({ textColor, backgroundColor }) => {
       <h4 style={{ marginTop: '1rem' }}><strong>From the Root to the Fruit</strong></h4><h6>JAMstack - React.js - Bootstrap - Gatsby - Netlify</h6>
       <p className='projectText'>A webpage built for the event From the Root to the Fruit: Portraits of Black Fathers and Their Children, presented at the Barnes. Developed using the JAMstack, built with Gatsby, and deployed/hosted on CMS via Netlify.</p>
       <p>View the site at <a rel="noopener noreferrer" target='_blank' href='https://www.fromtheroottothefruit.org/'>fromtheroottothefruit.org</a></p>
+      <h4 style={{ marginTop: '1rem' }}><strong>Project CARL</strong></h4><h6>Python - Jinja -  Vanilla HTML & CSS</h6>
+      <p className='projectText'>A front end redesign of Project CARL, the ChatHacks Rom Loader. After authentication via Twitch, it allows users to write and submit ASM code for Patcdr's Twitch channel via a custom built code editor.</p>
+      <p>View the site at <a rel="noopener noreferrer" target='_blank' href='https://patcdr.net/carl/'>patcdr.net/carl</a></p>
       <h4 style={{ marginTop: '1rem' }}><strong>Currensea</strong></h4><h6>React.js - RESTful API - Bootstrap</h6>
       <p className='projectText'>Built and deployed over the course of only 4 hours for a Mintbean hackathon, Currensea is a a currency converter that is fast and responsive, handling conversions in response to the user in real time.</p>
       <p>View it live <a rel="noopener noreferrer" target='_blank' href='https://zackmckenna.github.io/current/'>here</a></p>
