@@ -11,6 +11,10 @@ const Projects = ({ textColor, backgroundColor }) => {
   return (
     <div style={{ backgroundColor: backgroundColor, color: textColor }} className='mainContent'>
       <h1><strong>Projects</strong></h1>
+      <h4 style={{ marginTop: '1rem' }}><strong>Philly OEO Business Database Search</strong></h4><h6>JAMstack - React.js - Tailwind.css - Redwood.js - Netlify - Algolia Search</h6>
+      <p className='projectText'>A searchable database of Women, Minority, Disabled and Disadvantaged owned businesses around Philadelphia. The data is from the Philly OEO, and uses Algolia Search to provide a serverless, searchable database solution.</p>
+      <p>View the site at <a rel="noopener noreferrer" target='_blank' href='https://silly-wing-3e7006.netlify.app/'>here</a></p>
+      <p>View the source <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/mintbean-6-29/'>on github</a></p>
       <h4 style={{ marginTop: '1rem' }}><strong>From the Root to the Fruit</strong></h4><h6>JAMstack - React.js - Bootstrap - Gatsby - Netlify</h6>
       <p className='projectText'>A webpage built for the event From the Root to the Fruit: Portraits of Black Fathers and Their Children, presented at the Barnes. Developed using the JAMstack, built with Gatsby, and deployed/hosted on CMS via Netlify.</p>
       <p>View the site at <a rel="noopener noreferrer" target='_blank' href='https://www.fromtheroottothefruit.org/'>fromtheroottothefruit.org</a></p>
