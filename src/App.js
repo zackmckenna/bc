@@ -6,6 +6,9 @@ import Home from './components/Home'
 import Sandbox from './components/SandBox'
 import About from './components/About'
 import Exploration from './components/Exploration'
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga'
+
 import 'react-awesome-slider/dist/styles.css'
 import { Button } from 'react-bootstrap'
 import BackgroundColor from 'react'
@@ -16,6 +19,16 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+
+const history = createBrowserHistory()
+
+const trackingId = "UA-22402465-2"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
+
+history.listen(location => {
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
+});
 
 function App() {
   const [show, setShow] = useState(false)
@@ -137,7 +150,7 @@ function App() {
     <div style={{ backgroundColor: backgroundColor }} className='App'>
       <Button style={{ position: 'absolute', right: '1rem', top:'1rem'}} className='btn-sm' id='darkModeButton' variant={darkMode ? 'light' : 'dark' } onClick={() => toggleDarkMode()}>{darkMode ? 'Light' : 'Dark'} Mode</Button>
       <div style={{ backgroundColor: backgroundColor }} className='container'>
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router history={history} basename={process.env.PUBLIC_URL}>
             <header style={{ textColor: textColor, backgroundColor: backgroundColor, paddingTop: '2rem'}} >
               <Link style={{ color: textColor }} to='/'>Home</Link>
               {/* <Link style={{ color: textColor }} to='/about'>About</Link> */}
