@@ -11,6 +11,10 @@ const Projects = ({ textColor, backgroundColor }) => {
   return (
     <div style={{ backgroundColor: backgroundColor, color: textColor }} className='mainContent'>
       <h1><strong>Projects</strong></h1>
+       <h4 style={{ marginTop: '1rem' }}><strong>Taco.io</strong></h4><h6>JAMstack - React.js - Tailwind.css - Redwood.js - Netlify</h6>
+      <p className='projectText'>An app built in Redwood.js that uses the Google Places API and Browser Geolocation API to locate the nearest taco joint</p>
+      <p>View the site at <a rel="noopener noreferrer" target='_blank' href='https://trusting-dijkstra-d1af25.netlify.app/'>here</a></p>
+      <p>View the source <a rel="noopener noreferrer" target='_blank' href='https://github.com/zackmckenna/taco'>on github</a></p>
       <h4 style={{ marginTop: '1rem' }}><strong>Philly OEO Business Database Search</strong></h4><h6>JAMstack - React.js - Tailwind.css - Redwood.js - Netlify - Algolia Search</h6>
       <p className='projectText'>A searchable database of Women, Minority, Disabled and Disadvantaged owned businesses around Philadelphia. The data is from the Philly OEO, and uses Algolia Search to provide a serverless, searchable database solution.</p>
       <p>View the site at <a rel="noopener noreferrer" target='_blank' href='https://silly-wing-3e7006.netlify.app/'>here</a></p>
