@@ -111,7 +111,6 @@ function App() {
   }
 
   const toggleDarkMode = () => {
-    console.log('clicked')
     setDarkMode(!darkMode)
     !darkMode ? changeColor('#343a40','#d1d1d1') : changeColor('#e9e9e9', '#444')
   }
@@ -120,8 +119,6 @@ function App() {
     setFunMode(!funMode)
     setClickCount(clickCount +  1)
     !funMode ? setFunCount(funCount + 1) : setFunCount(funCount)
-    console.log(funMode)
-    console.log(funCount)
   }
   // const colorArray = [
   //   {background: '#ff595f', text:'#5fff59'},
